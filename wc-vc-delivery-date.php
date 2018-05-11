@@ -47,8 +47,7 @@ function wcvcdd_admin_enqueue_scripts(){
     wp_enqueue_script( 'wcvcdd', plugins_url('wc-vc-delivery-date.js', __FILE__), array('jquery','jquery-datetimepicker', 'moment') );
     wp_localize_script('wcvcdd', 'wcvcdd', array(
         'locale' => get_locale(),
-        'format' => 'DD/MM/YYYY HH:mm',
-        'add_note_ajax_time_format' => sprintf( __( 'added on %1$s at %2$s', 'woocommerce' ), wc_date_format(), wc_time_format() )
+        'format' => 'DD/MM/YYYY HH:mm' //TODO: Add custom formats
     ));
 }
 
