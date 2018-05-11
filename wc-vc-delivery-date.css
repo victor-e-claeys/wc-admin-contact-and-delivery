@@ -1,0 +1,55 @@
+.wcvcdd::before{
+    font-family: 'dashicons';
+    content: "\f508";
+    font-size: 1.5em;
+    margin-right: .25rem;
+    vertical-align: middle;
+}
+
+.wc-action-button-notes::after{
+    font-family: 'dashicons';
+    content: "\f473";
+}
+
+.wc-action-button-contacted::after{
+    font-family: 'dashicons';
+    content: "\f525";
+}
+
+.wc-action-button-contacted[href^="#contacted"]{
+    background-color: #ddd;
+    border-style: inset;
+}
+
+.post-type-shop_order .wp-list-table .delivery-date .wcvcdd{
+    cursor: pointer!important;
+    white-space: nowrap;
+}
+
+.wc-notes-modal .note{
+    background-color: #eee;
+    margin: 8px;
+    padding: 8px;
+}
+
+.wc-notes-modal .note.selected{
+    background-color: #cec;
+}
+
+.wc-notes-modal .note .delete_note{
+    display: none;
+}
+
+.wc-notes-modal .notes{
+    overflow: auto;
+    list-style:none;
+}
+
+.wc-notes-modal .add-order-note{
+    display: flex;
+}
+
+.wc-notes-modal .new-note{
+    border: none;
+    flex-grow: 1;
+}
