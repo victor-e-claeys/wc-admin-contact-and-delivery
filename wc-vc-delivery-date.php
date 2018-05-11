@@ -8,6 +8,12 @@ Author URI: https://www.vincentclaeys.com
 License: GPLv2
 */
 
+add_action( 'plugins_loaded', 'wcvcdd_load_textdomain' );
+
+function wcvcdd_load_textdomain() {
+  load_plugin_textdomain( 'wcvcdd', false, basename( dirname( __FILE__ ) ) . '/languages' ); 
+}
+
 add_filter( 'manage_edit-shop_order_columns', 'wcvcdd_shop_order_column', 20 );
 function wcvcdd_shop_order_column($columns)
 {
@@ -136,7 +142,6 @@ function wcvcdd_notes_modal(){
                                         <# print(moment.utc(note.date_created.date).format(wcvcdd.format)) #>
                                     </abbr>
                                     <?php printf(__( 'by %s', 'woocommerce' ), '' ); ?> {{note.added_by}}
-                                    <a href="#" class="delete_note" role="button"><?php _e( 'Delete note', 'woocommerce' ); ?></a>
                                 </p>
                             </li>
                             <# }) #>
